@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Curancy Converter</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body class="crc">
+
+
+<div class="card text-white bg-info mb-3 mt-5 offset-md-4" style="max-width: 25rem; height: 25rem;">
+  <div class="card-header" style="font-size: 30px; ">Curancy Converter</div>
+  <div class="card-body">
+    
+<h2>Seclect Cuancy</h2>
+<select name="currency" id="inputCurrency" onchanhge="firstTOsecond()" onclick="firstTOsecond()" oninput="firstTOsecond()">
+	
+<option value="select">Select</option>
+<option value="Taka">Bangladesh Taka</option>
+<option value="Rupee">India Rupee</option>
+<option value="Doller"> Us Doller</option>
+<option value="Riyal"> Southi Riyal</option>
+
+
+</select>
+<input type="number" name="first" onclick="firstTOsecond()" oninput="firstTOsecond()" id="firstCurrency">
+
+<h2 class="mt-5">Convert Cuancy</h2>
+
+<select name="" id="outputCurrency"onchanhge="firstTOsecond()" onclick="firstTOsecond()" oninput="firstTOsecond()">
+	
+<option value="select">Select</option>
+<option value="Taka1">Bangladesh Taka</option>
+<option value="Rupee1">India Rupee</option>
+<option value="Doller1"> Us Doller</option>
+<option value="Riyal1"> Southi Riyal</option>
+
+
+</select>
+
+<input type="number" name="Second " id="secondCurrency"  >
+
+<script type="text/javascript">
+	
+function firstTOsecond(){
+	
+var input1=document.getElementById("firstCurrency").value;
+var input2=document.getElementById("secondCurrency").value;
+if(document.getElementById("inputCurrency").value=='Taka')
+{
+if(document.getElementById("outputCurrency").value=='Taka1'){
+document.getElementById("secondCurrency").value=input1*1;
+}
+else if(document.getElementById("outputCurrency").value=='Rupee1'){
+document.getElementById("secondCurrency").value=input1*0.85942;
+}
+else if(document.getElementById("outputCurrency").value=='Doller1'){
+document.getElementById("secondCurrency").value=input1*0.01182;
+}
+else if(document.getElementById("outputCurrency").value=='Riyal1'){
+document.getElementById("secondCurrency").value=input1*0.04433;
+}
+}
+if(document.getElementById("inputCurrency").value=='Rupee')
+{
+if(document.getElementById("outputCurrency").value=='Taka1'){
+document.getElementById("secondCurrency").value=input1*1.13876;
+}
+else if(document.getElementById("outputCurrency").value=='Rupee1'){
+document.getElementById("secondCurrency").value=input1*1;
+}
+else if(document.getElementById("outputCurrency").value=='Doller1'){
+document.getElementById("secondCurrency").value=input1*0.01373;
+}
+else if(document.getElementById("outputCurrency").value=='Riyal1'){
+document.getElementById("secondCurrency").value=input1*0.05149;
+}
+}
+if(document.getElementById("inputCurrency").value=='Doller')
+{
+if(document.getElementById("outputCurrency").value=='Taka1'){
+document.getElementById("secondCurrency").value=input1*82.9257;
+}
+else if(document.getElementById("outputCurrency").value=='Rupee1'){
+document.getElementById("secondCurrency").value=input1*72.6941;
+}
+else if(document.getElementById("outputCurrency").value=='Doller1'){
+document.getElementById("secondCurrency").value=input1*1;
+}
+else if(document.getElementById("outputCurrency").value=='Riyal1'){
+document.getElementById("secondCurrency").value=input1*3.74985;
+}
+}
+if(document.getElementById("inputCurrency").value=='Riyal')
+{
+if(document.getElementById("outputCurrency").value=='Taka1'){
+document.getElementById("secondCurrency").value=input1*22.1005;
+}
+else if(document.getElementById("outputCurrency").value=='Rupee1'){
+document.getElementById("secondCurrency").value=input1*19.3737;
+}
+else if(document.getElementById("outputCurrency").value=='Doller1'){
+document.getElementById("secondCurrency").value=input1*0.2627;
+}
+else if(document.getElementById("outputCurrency").value=='Riyal1'){
+document.getElementById("secondCurrency").value=input1*1;
+}
+}
+}
+</script>
+
+  </div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+</html>
